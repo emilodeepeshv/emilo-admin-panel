@@ -236,7 +236,7 @@ const AllUsers = () => {
             <Calendar className="w-5 h-5" />
             <span className="text-md">Last 7 days:</span>
             <span className="text-md font-medium">
-              Feb 1, 2025 - Feb 7, 2025
+              Feb 1, 2024 - Feb 7, 2024
             </span>
           </button>
         </div>
