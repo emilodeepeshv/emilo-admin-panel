@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="15.348" height="10.554" viewBox="0 0 15.348 10.554">
+  <g id="Group_21586" data-name="Group 21586" transform="translate(0.25 0.25)">
+    <path id="Path_367" data-name="Path 367" d="M-1.15-1.15H4.9A4.666,4.666,0,0,1,8.28.3,4.97,4.97,0,0,1,9.672,3.772V8.9H4.365a5.334,5.334,0,0,1-2.151-.45A5.49,5.49,0,0,1,.46,7.231a5.75,5.75,0,0,1-1.61-4.02ZM8.857,8.089V3.772A4.159,4.159,0,0,0,7.694.863,3.857,3.857,0,0,0,4.9-.335H-.335V3.211A4.939,4.939,0,0,0,1.046,6.665,4.585,4.585,0,0,0,4.365,8.089Z" transform="translate(1.15 1.15)" fill="#fff" stroke="#fff" stroke-width="0.5"/>
+    <ellipse id="Ellipse_224" data-name="Ellipse 224" cx="2.95" cy="2.95" rx="2.95" ry="2.95" transform="translate(2.506 2.074)" fill="#fff"/>
+    <ellipse id="Ellipse_227" data-name="Ellipse 227" cx="0.597" cy="0.597" rx="0.597" ry="0.597" transform="translate(4.86 2.825)" fill="#3d433c"/>
+    <ellipse id="Ellipse_618" data-name="Ellipse 618" cx="0.597" cy="0.597" rx="0.597" ry="0.597" transform="translate(4.86 6.022)" fill="#3d433c"/>
+    <ellipse id="Ellipse_617" data-name="Ellipse 617" cx="0.597" cy="0.597" rx="0.597" ry="0.597" transform="translate(6.459 4.428)" fill="#3d433c"/>
+    <ellipse id="Ellipse_619" data-name="Ellipse 619" cx="0.597" cy="0.597" rx="0.597" ry="0.597" transform="translate(3.261 4.428)" fill="#3d433c"/>
+    <path id="Polygon_2_-_Outline" data-name="Polygon 2 - Outline" d="M3.5,1.028,1.418,3.247H5.58L3.5,1.028M3.5,0a.353.353,0,0,1,.259.112L6.9,3.465a.354.354,0,0,1-.259.6H.355a.354.354,0,0,1-.259-.6L3.241.112A.353.353,0,0,1,3.5,0Z" transform="translate(10.786 9.606) rotate(-90)" fill="#fff" stroke="#fff" stroke-width="0.5"/>
+  </g>
+</svg>

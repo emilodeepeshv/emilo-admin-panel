@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+.showFooter {
+  z-index: 998 !important;
+}
+.showFooter_ {
+  z-index: 997 !important;
+}
+.showFooter__ {
+  z-index: 999 !important;
+}
+@layer utilities {
+  @media (min-width: 1180px) {
+    .mdx\:grid-cols-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .mdx\:p-8 {
+      padding: 2rem !important;
+    }
+
+    .mdx\:text-lg {
+      font-size: 1.125rem !important; /* 18px */
+      line-height: 1.75rem !important; /* 28px */
+    }
+  }
+}
+/* Removed custom CSS variables and @apply directives for Tailwind CSS v4 compatibility */
