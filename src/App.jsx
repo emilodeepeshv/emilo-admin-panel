@@ -15,6 +15,9 @@ const Flag = lazy(() => import("./pages/report-user/components/flag/Flag"));
 const FlaggedPostsPage = lazy(() => import("./pages/report-user/components/flag/FlaggedPostsPage"));
 const AdsDashboard = lazy(() => import("./pages/all-ads/ads-dashboard/AdsDashboard"));
 const AllAds = lazy(() => import("./pages/all-ads/next-page/AllAds"));
+const PageDashboard = lazy(() => import("./pages/page-sidbar/dashboard/PageDashboard"));
+const AllPages = lazy(() => import("./pages/page-sidbar/all-pages/AllPages.jsx"));
+const AllUsers = lazy(() => import("./pages/all-users/AllUsers.jsx"));
 const KPI = lazy(() => import("./pages/KPI/Kpi"));
 
 
@@ -39,7 +42,7 @@ const App = () => {
             {/* Auth */}
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
-            <Route path="/otp" element={<OtpVerify />} />
+            <Route path="/otp" element={<OtpVerify />} /> 
 
             {/* Protected */}
             <Route element={<Layout />}>
@@ -52,6 +55,9 @@ const App = () => {
               <Route path="/flag" element={<Flag />} />
               <Route path="/ads-dashboard" element={<AdsDashboard />} />
               <Route path="/all-ads" element={<AllAds />} />
+              <Route path="/page-dashboard" element={<PageDashboard />} />
+              <Route path="/all-pages" element={<AllPages />} />
+              <Route path="/all-users" element={<AllUsers />} />
               <Route path="/kpi" element={<KPI />} />
 
               {/* Flagged posts */}

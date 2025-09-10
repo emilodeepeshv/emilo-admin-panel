@@ -7,6 +7,7 @@ import {
   ArrowUpDown,
 } from "lucide-react";
 
+
 // ✅ Import icons from assets
 import Layer2Icon from "/Layer 2.svg";
 import DevicesIcon from "/noun-devices-4716977.svg";
@@ -218,7 +219,7 @@ const UserReports = () => {
                 </button>
                 <button className="flex items-center justify-center gap-2 px-4 py-2 border border-gray-300 rounded-lg text-sm hover:bg-gray-50 transition-colors">
                   
-                  <img src={exportSvg} alt="" className="w-4 h-4 text-gray-500" />
+                  <img src={exportSvg} alt={exportSvg} className="w-4 h-4 text-gray-500" />
                   <span className="text-gray-700 font-semibold" >Export</span>
                 </button>
               </div>
@@ -240,19 +241,19 @@ const UserReports = () => {
                   <th className="px-4 sm:px-6 py-4 text-left">
                     <div className="flex items-center gap-2 text-sm font-semibold text-black tracking-wider">
                       Reported By
-                      <ArrowUpDown className="w-3.5 h-4 bg-white " />
+                      <ArrowUpDown className="w-6 h-6 p-1 rounded bg-white " />
                     </div>
                   </th>
                   <th className="px-4 sm:px-6 py-4 text-left">
                     <div className="flex items-center gap-2 text-sm font-semibold text-black tracking-wider">
                       Report Category
-                      <ArrowUpDown className="w-3.5 h-3.5 bg-white " />
+                      <ArrowUpDown className="w-6 h-6 p-1 rounded bg-white " />
                     </div>
                   </th>
                   <th className="px-4 sm:px-6 py-4 text-left">
                     <div className="flex items-center gap-2 text-sm font-semibold text-black tracking-wider">
                       Report Topic
-                      <ArrowUpDown className="w-3.5 h-4 bg-white " />
+                      <ArrowUpDown className="w-6 h-6 p-1 rounded bg-white " />
                     </div>
                   </th>
                   <th className="px-4 sm:px-6 py-4 text-left">
@@ -260,7 +261,7 @@ const UserReports = () => {
                       Severity
                     </span>
                   </th>
-                </tr>
+              </tr>
               </thead>
 
               <tbody className="divide-y divide-gray-200 bg-white">

@@ -77,22 +77,40 @@ const Sidebar = () => {
       ],
     },
     {
-      type: "single",
-      to: "/users",
-      label: "All Users",
-      icon: <Icon src="/Admin Users.svg" alt="All Users" />,
+      type: "expandable",
+      key: "pages",
+      label: "Pages",
+      icon: <Icon src="/Group 44333.svg" alt="pages" size={20}/>,
+      children: [
+        {
+          to: "/page-dashboard",
+          label: "Dashboard",
+          icon: <Icon src="/Dashboard.svg" alt="Dashboard" size={16} />,
+        },
+        {
+          to: "/all-pages",
+          label: "All Pages",
+          icon: <Icon src="/Group 44333.svg" alt="All Ads" size={18} />,
+        },
+      ],
     },
     {
       type: "single",
-      to: "/settings",
-      label: "Account & Settings",
-      icon: <Icon src="/Account & Settings.svg" alt="Account & Settings" />,
+      to: "/all-users",
+      label: "All Users",
+      icon: <Icon src="/Admin Users.svg" alt="All Users" />,
     },
     {
       type: "single",
       to: "/kpi",
       label: "KPI",
       icon: <ChartLine className="w-5 h-5" />,
+    },
+    {
+      type: "single",
+      to: "/settings",
+      label: "Account & Settings",
+      icon: <Icon src="/Account & Settings.svg" alt="Account & Settings" />,
     },
   ];
 

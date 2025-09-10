@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Search, Calendar, Upload, ChevronUp, ChevronDown } from "lucide-react";
+import exportSvg from "/export-bold-svgrepo-com.svg";
+
 
 const UserActivity = () => {
   const [isExpanded, setIsExpanded] = useState(true);
@@ -28,7 +30,7 @@ const UserActivity = () => {
         </div>
         
         <button className="flex items-center gap-2 px-3 py-2 border border-gray-200 rounded-lg hover:bg-gray-50">
-          <Upload className="w-4 h-4 text-gray-600" />
+        <img src={exportSvg} alt={exportSvg} className="w-4 h-4 text-gray-600"/>
           <span className="text-sm text-gray-700">Export</span>
         </button>
       </div>
