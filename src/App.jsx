@@ -27,6 +27,7 @@ const AdPlacement = lazy(() => import("./pages/ad-placement/AdPlacement"));
 const SoftDashboard = lazy(() => import("./pages/softcorner/dashboard/SoftDashboard.jsx"));
 const SoftAllUsers = lazy(() => import("./pages/softcorner/all-users/SoftAllUsers.jsx"));
 const Transaction = lazy(() => import("./pages/transection/Transection.jsx"));
+const TransactionDetail = lazy(() => import("./utils/TrasectionDetail.jsx"));
 
 
 
@@ -76,6 +77,7 @@ const App = () => {
               <Route path="/soft-dashboard" element={<SoftDashboard />} />
               <Route path="/soft-all-users" element={<SoftAllUsers />} />
               <Route path="/transaction" element={<Transaction />} />
+              <Route path="/transaction-modal" element={<TransactionDetail />} />
 
               {/* Flagged posts */}
               <Route path="/reports/flagged" element={<FlaggedPostsPage />} />

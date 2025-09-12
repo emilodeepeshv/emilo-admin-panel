@@ -10,7 +10,7 @@ const Layout = () => {
 
       {/* Main Content */}
       <div className="flex-1 bg-gray-50 min-h-screen lg:ml-64">
-        <div className="p-6">
+        <div className="pl-6">
           {/* Children pages will render here */}
           <Outlet />
         </div>

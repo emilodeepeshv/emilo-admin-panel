@@ -187,11 +187,11 @@ const Sidebar = () => {
   return (
     <>
       {/* Desktop Sidebar */}
-      <div className="hidden lg:flex w-64 bg-white h-screen shadow-sm flex-col border-r border-gray-200 showFooter fixed">
+      <div className="hidden lg:flex w-70 bg-white h-screen shadow-sm flex-col border-r border-gray-200 showFooter fixed">
         {/* Logo */}
         <div className="h-16 flex items-center px-6 border-b border-gray-100 font-bold text-xl align-middle">
-          <img src={Logo} alt={Logo} className="w-17" />
-          <span className="ml-2 text-xs font-semibold text-black">
+          <img src={Logo} alt={Logo} className="w-17 " />
+          <span className="ml-2 text-sm my-auto font-semibold text-black">
             Report Management
           </span>
         </div>
@@ -212,7 +212,7 @@ const Sidebar = () => {
         </div>
 
         {/* Navigation Menu */}
-        <nav className="flex-1 px-4 py-4 space-y-1 overflow-y-auto">
+        <nav className="flex-1 px-4 py-4 space-y-1 overflow-y-auto hide-scrollbar ">
           {menuItems.map((item) => {
             if (item.type === "single") {
               return (

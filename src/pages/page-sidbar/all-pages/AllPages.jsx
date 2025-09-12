@@ -241,7 +241,7 @@ const AllPages = () => {
   );
 
   return (
-    <div className="bg-gray-50 min-h-screen">
+    <div className="bg-gray-50 min-h-screen m-6">
       {/* Header */}
       <div className="flex justify-between items-center mb-8 border border-gray-200 p-3 rounded-lg shadow">
         <h1 className="text-2xl font-bold text-gray-900">All Pages</h1>
@@ -263,7 +263,7 @@ const AllPages = () => {
       </div>
 
       {/* Search and Filter Bar */}
-      <div className="flex flex-col lg:flex-row items-center justify-between p-4 border-b border-gray-100 gap-4">
+      <div className="flex flex-col lg:flex-row items-center justify-between mb-8 border-b border-gray-100 gap-4">
         <div className="relative w-full lg:flex-1">
           <Search className="w-4 h-4 text-gray-400 absolute left-3 top-1/2 transform -translate-y-1/2" />
           <input
@@ -281,7 +281,7 @@ const AllPages = () => {
             <span className="text-sm font-medium">Feb 1, 2024 - Feb 7, 2024</span>
           </button>
           <button className="flex items-center gap-2 px-3 py-2 border border-gray-200 hover:bg-gray-50 rounded-lg">
-            <Download className="w-4 h-4 text-gray-600"/>
+            <img src='/export-bold-svgrepo-com.svg' className="w-4 h-4 text-gray-600"/>
             <span className="text-sm text-gray-600">Export</span>
           </button>
         </div>

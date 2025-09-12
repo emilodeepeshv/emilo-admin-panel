@@ -1,4 +1,6 @@
 import React, { useState, useMemo } from 'react';
+import { useNavigate } from 'react-router-dom'; // Add this import
+import TransactionModal from '../../utils/TrasectionDetail';
 import {
   RefreshCcw,
   MoreVertical,
@@ -17,6 +19,8 @@ import {
 } from 'lucide-react';
 
 const Transaction = () => {
+  const navigate = useNavigate(); // Add this hook
+  
   const [transactions, setTransactions] = useState([
     {
       id: 1,
@@ -119,6 +123,17 @@ const Transaction = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [itemsPerPage, setItemsPerPage] = useState(10);
   const [currentPage, setCurrentPage] = useState(1);
+
+  // Add this function to handle row clicks
+  const handleRowClick = (transaction, event) => {
+    // Prevent navigation if checkbox was clicked
+    if (event.target.type === 'checkbox') {
+      return;
+    }
+    
+    // Navigate to transaction modal with user ID
+    navigate(`/transaction-modal/${transaction.id}`);
+  };
 
   const toggleSelectAll = () => {
     if (selectedTransactionIds.length === transactions.length) {
@@ -291,50 +306,55 @@ const Transaction = () => {
                 </th>
                 <th className="px-6 py-3 text-left text-md font-medium text-black">
                   <div className="flex items-center">
-                    User Name/ID <ArrowUpDown size={25} className="bg-white p-1 ml-1 rounded" />
+                    User Name/ID <ArrowUpDown size={22} className="bg-white p-1 ml-1 rounded" />
                   </div>
                 </th>
                 <th className="px-6 py-3 text-left text-md font-medium text-black">
                   <div className="flex items-center">
-                    Transaction Id <ArrowUpDown size={25} className="bg-white p-1 ml-1 rounded" />
+                    Transaction Id <ArrowUpDown size={22} className="bg-white p-1 ml-1 rounded" />
                   </div>
                 </th>
                 <th className="px-6 py-3 text-left text-md font-medium text-black ">
                   <div className="flex items-center">
-                    Date <ArrowUpDown size={25} className="bg-white p-1 ml-1 rounded" />
+                    Date <ArrowUpDown size={22} className="bg-white p-1 ml-1 rounded" />
                   </div>
                 </th>
                 <th className="px-6 py-3 text-left text-md font-medium text-black ">
                   <div className="flex items-center">
-                    Account <ArrowUpDown size={25} className="bg-white p-1 ml-1 rounded" />
+                    Account <ArrowUpDown size={22} className="bg-white p-1 ml-1 rounded" />
                   </div>
                 </th>
                 <th className="px-6 py-3 text-left text-md font-medium text-black ">
                   <div className="flex items-center">
-                    Mode <ArrowUpDown size={25} className="bg-white p-1 ml-1 rounded" />
+                    Mode <ArrowUpDown size={22} className="bg-white p-1 ml-1 rounded" />
                   </div>
                 </th>
                 <th className="px-6 py-3 text-left text-md font-medium text-black ">
                   <div className="flex items-center">
-                    Type <ArrowUpDown size={25} className="bg-white p-1 ml-1 rounded" />
+                    Type <ArrowUpDown size={22} className="bg-white p-1 ml-1 rounded" />
                   </div>
                 </th>
                 <th className="px-6 py-3 text-left text-md font-medium text-black ">
                   <div className="flex items-center">
-                    Amount <ArrowUpDown size={25} className="bg-white p-1 ml-1 rounded" />
+                    Amount <ArrowUpDown size={22} className="bg-white p-1 ml-1 rounded" />
                   </div>
                 </th>
               </tr>
             </thead>
             <tbody className="bg-white divide-y divide-gray-200">
               {paginatedTransactions.map((transaction, index) => (
-                <tr key={transaction.id} className="hover:bg-gray-50">
+                <tr 
+                  key={transaction.id} 
+                  className="hover:bg-gray-50 cursor-pointer transition-colors duration-200"
+                  onClick={(event) => handleRowClick(transaction, event)}
+                >
                   <td className="px-6 py-4 whitespace-nowrap">
                     <input
                       type="checkbox"
                       className="form-checkbox h-4 w-4 text-blue-600 rounded"
                       checked={isSelected(transaction.id)}
                       onChange={() => toggleSelectTransaction(transaction.id)}
+                      onClick={(e) => e.stopPropagation()} // Prevent row click when checkbox is clicked
                     />
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
