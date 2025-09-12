@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import Logo from '/emilof (1)@2x.png';
-import {ChartLine} from 'lucide-react';
+import {ChartLine, Orbit, User} from 'lucide-react';
 
 const Sidebar = () => {
   const [expandedSections, setExpandedSections] = useState({
@@ -98,13 +98,71 @@ const Sidebar = () => {
       type: "single",
       to: "/all-users",
       label: "All Users",
-      icon: <Icon src="/Admin Users.svg" alt="All Users" />,
+      icon: <User size={20} className="text-black"/>,
     },
     {
       type: "single",
       to: "/kpi",
       label: "KPI",
       icon: <ChartLine className="w-5 h-5" />,
+    },
+    {
+      type: "expandable",
+      key: "coustom-data",
+      label: "Custom Data",
+      icon: <Orbit size={20} className="text-black"/>,
+      children: [
+        {
+          to: "/user-coustom-data",
+          label: "User",
+          icon: <User size={20} className="text-black"/>,
+        },
+        {
+          to: "/ads-coustom-data",
+          label: "Ads",
+          icon: <Icon src="/Ads.svg" alt="All Ads" size={22} />,
+        },
+        {
+          to: "/softcorner-coustom-data",
+          label: "Softcorner",
+          icon: <Icon src="/Soft Corner.png" alt="All Ads" size={18} />,
+        },
+        {
+          to: "/page-coustom-data",
+          label: "Page",
+          icon: <Icon src="/Group 44333.svg" alt="All Ads" size={18} />,
+        },
+      ],
+    },
+    {
+      type: "single",
+      to: "/ad-placement",
+      label: "Ad Placement",
+      icon: <Icon src="/Group 44333.svg" alt="ad & placement" />,
+    },
+    {
+      type: "expandable",
+      key: "softcorner",
+      label: "Soft Corner",
+      icon: <Icon src="/Soft Corner.png" alt="SoftCorner" size={20}/>,
+      children: [
+        {
+          to: "/soft-dashboard",
+          label: "Dashboard",
+          icon: <Icon src="/Dashboard.svg" alt="Dashboard" size={16} />,
+        },
+        {
+          to: "/soft-all-users",
+          label: "All Pages",
+          icon: <Icon src="/Group 44333.svg" alt="All Ads" size={18} />,
+        },
+      ],
+    },
+    {
+      type: "single",
+      to: "/transaction",
+      label: "Transaction",
+      icon: <Icon src="/Transactions.svg" alt="Account & Settings" />,
     },
     {
       type: "single",

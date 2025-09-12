@@ -19,6 +19,15 @@ const PageDashboard = lazy(() => import("./pages/page-sidbar/dashboard/PageDashb
 const AllPages = lazy(() => import("./pages/page-sidbar/all-pages/AllPages.jsx"));
 const AllUsers = lazy(() => import("./pages/all-users/AllUsers.jsx"));
 const KPI = lazy(() => import("./pages/KPI/Kpi"));
+const UserCoustomData = lazy(() => import("./pages/coustom-data/UserCoustomData.jsx"));
+const AdsCoustomData = lazy(() => import("./pages/coustom-data/AdsCoustomData"));
+const SoftCornerCoustomData = lazy(() => import("./pages/coustom-data/SoftCornerCoustomData"));
+const PageCoustomData = lazy(() => import("./pages/coustom-data/PageCoustomData"));
+const AdPlacement = lazy(() => import("./pages/ad-placement/AdPlacement"));
+const SoftDashboard = lazy(() => import("./pages/softcorner/dashboard/SoftDashboard.jsx"));
+const SoftAllUsers = lazy(() => import("./pages/softcorner/all-users/SoftAllUsers.jsx"));
+const Transaction = lazy(() => import("./pages/transection/Transection.jsx"));
+
 
 
 // User profile area (layout + sections)
@@ -59,6 +68,14 @@ const App = () => {
               <Route path="/all-pages" element={<AllPages />} />
               <Route path="/all-users" element={<AllUsers />} />
               <Route path="/kpi" element={<KPI />} />
+              <Route path="/user-coustom-data" element={<UserCoustomData />} />
+              <Route path="/ads-coustom-data" element={<AdsCoustomData />} />
+              <Route path="/softcorner-coustom-data" element={<SoftCornerCoustomData />} />
+              <Route path="/page-coustom-data" element={<PageCoustomData />} />
+              <Route path="/ad-placement" element={<AdPlacement />} />
+              <Route path="/soft-dashboard" element={<SoftDashboard />} />
+              <Route path="/soft-all-users" element={<SoftAllUsers />} />
+              <Route path="/transaction" element={<Transaction />} />
 
               {/* Flagged posts */}
               <Route path="/reports/flagged" element={<FlaggedPostsPage />} />
