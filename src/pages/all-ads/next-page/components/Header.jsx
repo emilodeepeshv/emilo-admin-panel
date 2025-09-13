@@ -3,10 +3,10 @@ import { ChevronRight, RefreshCw, MoreVertical } from 'lucide-react';
 
 const Header = ({ onRefresh }) => {
   return (
-    <div className="bg-white border-b border-gray-200 px-4 md:px-6 py-4 shadow rounded-2xl max-w-[97%] mx-auto">
+    <div className="bg-white border-b border-gray-200 px-4 md:px-6 py-3 shadow rounded-lg  mx-auto">
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div className="flex items-center gap-2">
-          <span className="text-gray-600 text-sm">Ads</span>
+          <span className="text-black text-md font-semibold">Ads</span>
           <ChevronRight className="w-4 h-4 text-gray-400" />
           <span className="text-blue-600 text-sm font-medium">End User Ads</span>
         </div>

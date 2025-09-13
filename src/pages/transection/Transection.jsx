@@ -1,6 +1,5 @@
 import React, { useState, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom'; // Add this import
-import TransactionModal from '../../utils/TrasectionDetail';
 import {
   RefreshCcw,
   MoreVertical,
@@ -132,7 +131,7 @@ const Transaction = () => {
     }
     
     // Navigate to transaction modal with user ID
-    navigate(`/transaction-modal/${transaction.id}`);
+    navigate(`/transaction-modal/`);
   };
 
   const toggleSelectAll = () => {

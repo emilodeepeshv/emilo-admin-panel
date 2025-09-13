@@ -10,7 +10,6 @@ const Dashboard = lazy(() => import("./pages/dashboard/Dashboard"));
 const Reports = lazy(() => import("./pages/report-dashboard/section/ReportsDashboard"));
 const Insights = lazy(() => import("./pages/insights/Insights"));
 const ReportsUser = lazy(() => import("./pages/report-user/ReportsUser"));
-const Settings = lazy(() => import("./pages/Settings"));
 const Flag = lazy(() => import("./pages/report-user/components/flag/Flag"));
 const FlaggedPostsPage = lazy(() => import("./pages/report-user/components/flag/FlaggedPostsPage"));
 const AdsDashboard = lazy(() => import("./pages/all-ads/ads-dashboard/AdsDashboard"));
@@ -28,6 +27,9 @@ const SoftDashboard = lazy(() => import("./pages/softcorner/dashboard/SoftDashbo
 const SoftAllUsers = lazy(() => import("./pages/softcorner/all-users/SoftAllUsers.jsx"));
 const Transaction = lazy(() => import("./pages/transection/Transection.jsx"));
 const TransactionDetail = lazy(() => import("./utils/TrasectionDetail.jsx"));
+const BlockedFreezed = lazy(() => import("./pages/blocked-freezed/BlockedFreezed.jsx"));
+const SuspiciousActivity = lazy(() => import("./pages/suspicious-activity/SuspiciousActivity.jsx"));
+const Settings = lazy(() => import("./pages/account-and-setting/Account&Settings.jsx"));
 
 
 
@@ -60,7 +62,6 @@ const App = () => {
               <Route path="/reports" element={<Reports />} />
               <Route path="/reportusers" element={<ReportsUser />} />
               <Route path="/insights" element={<Insights />} />
-              <Route path="/settings" element={<Settings />} />
               <Route path="/user" element={<Insights />} />
               <Route path="/flag" element={<Flag />} />
               <Route path="/ads-dashboard" element={<AdsDashboard />} />
@@ -78,6 +79,9 @@ const App = () => {
               <Route path="/soft-all-users" element={<SoftAllUsers />} />
               <Route path="/transaction" element={<Transaction />} />
               <Route path="/transaction-modal" element={<TransactionDetail />} />
+              <Route path="/blocked-freezed" element={<BlockedFreezed />} />
+              <Route path="/suspicious-activity" element={<SuspiciousActivity />} />
+              <Route path="/settings" element={<Settings />} />
 
               {/* Flagged posts */}
               <Route path="/reports/flagged" element={<FlaggedPostsPage />} />

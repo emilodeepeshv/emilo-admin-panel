@@ -253,10 +253,12 @@ const AllAds = () => {
   });
 
   return (
-    <div className="min-h-screen p-4 ">
-      <Header onRefresh={handleRefresh} />
+    <div className="min-h-screen p-6 ">
+      <div>
+        <Header onRefresh={handleRefresh} />
+      </div>
       
-      <div className="px-4 md:px-6 py-6">
+      <div className="px- md:px- py-6">
         <SearchFilter 
           searchQuery={searchQuery}
           onSearchChange={setSearchQuery}

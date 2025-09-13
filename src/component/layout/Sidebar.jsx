@@ -18,7 +18,7 @@ const Sidebar = () => {
     }));
   };
 
-  // Icon component for consistent styling
+  // Icon component for consistent styling 
   const Icon = ({ src, alt, size = 20 }) => (
     <img 
       src={src} 
@@ -163,6 +163,18 @@ const Sidebar = () => {
       to: "/transaction",
       label: "Transaction",
       icon: <Icon src="/Transactions.svg" alt="Account & Settings" />,
+    },
+    {
+      type: "single",
+      to: "/blocked-freezed",
+      label: "Blocked/Freezed",
+      icon: <Icon src="/Blocked-Freezed.svg" alt="Blocked/Freezed" />,
+    },
+    {
+      type: "single",
+      to: "/suspicious-activity",
+      label: "Suspicious Activity",
+      icon: <Icon src="/Suspicious Activity.svg" alt="Suspicious Activity" />,
     },
     {
       type: "single",
